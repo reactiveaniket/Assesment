@@ -1,0 +1,27 @@
+<div class="container">
+  <div class="row">
+    <div class="col col-sm-12 col-md-6 offset-md-3 col-lg-6 offset-lg-3">
+      <div class="search-cnt">
+          <div class="row">
+              <div class="col col-sm-12 col-md-8 col-lg-8">
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="name" required [(ngModel)]="searchText" name="user" placeholder="Enter username">
+                  </div>
+              </div>
+              <div class="col col-sm-12 col-md-4 col-lg-4">
+                  <button type="button" class="btn btn-primary" (click)="searchUser()">Search</button>
+              </div>
+          </div>
+      </div>
+    </div>
+  </div>
+  <div class="result-cnt">
+    <div class="row user-cnt">
+      <div *ngFor="let user of userList" class="col col-sm-12 col-md-6 col-lg-6">
+        <div class="user">
+          <a routerLink="/detail/{{user.login}}">{{user.login}}</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

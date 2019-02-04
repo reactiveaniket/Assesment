@@ -1,0 +1,32 @@
+<div class="container user-detail-cnt">
+  <div class="row">
+    <div class="col col-sm-12 col-md-5 col-lg-4">
+      <div class="data-cnt">
+        <img src={{user.avatar_url}} />
+        <div class="personal">
+          <div class="name padd-10">{{user.name}}</div>
+          <div class="location padd-10">{{user.location}}</div>
+          <div class="bio padd-10">
+            <a href={{user.blog}} target="_blank">{{user.blog}}</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col col-sm-12 col-md-7 col-lg-8">
+      <div class="data-cnt">
+        <div class="data">
+          <strong>Repositories</strong>
+          <span class="count">{{user.public_repos}}</span>
+        </div>
+        <div class="data">
+          <strong>Followers</strong>
+          <span class="count">{{user.followers}}</span>
+        </div>
+        <div class="data">
+          <strong>Following</strong>
+          <span class="count">{{user.following}}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
