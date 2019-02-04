@@ -8,7 +8,7 @@ import {AppserviceService} from '../../service/appservice.service';
   styleUrls: ['./login.component.less']
 })
 export class LoginComponent implements OnInit {
-  model: any = {};
+  user: any = {};
   submitted = false;
 
   constructor(private router: Router, private appService: AppserviceService) { }
@@ -17,11 +17,12 @@ export class LoginComponent implements OnInit {
   }
 
   validate() {
-    
+    console.log('VALS:', this.user);
+    this.appService.validateUser(this.user);
   }
-  loginWithGithun(){
+  loginWithGithub(){
     this.submitted = true;
-    console.log('VALS:', this.model);
+    
     this.appService.authorizeGithubUser();
   }
 
